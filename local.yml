@@ -1,0 +1,11 @@
+---
+
+- hosts: localhost
+  become: yes
+  tasks:
+    - import_role:
+        name: back-in-time
+    - import_role:
+        name: signal
+    - import_role:
+        name: steam

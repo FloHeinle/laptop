@@ -1,0 +1,4 @@
+---
+
+- import_tasks: signal.yml
+  tags: [signal]

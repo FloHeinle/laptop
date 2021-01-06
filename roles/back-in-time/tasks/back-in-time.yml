@@ -1,0 +1,13 @@
+---
+
+- name: Add back-in-time stable repository from PPA
+  apt_repository:
+    repo: 'ppa:bit-team/stable'
+    codename: eoan
+
+- name: Install
+  apt:
+    name:
+      - backintime-qt4
+    state: present
+    update_cache: true

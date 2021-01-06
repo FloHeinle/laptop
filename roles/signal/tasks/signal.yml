@@ -1,0 +1,20 @@
+---
+
+- name: Add repository key
+  apt_key:
+    url: https://updates.signal.org/desktop/apt/keys.asc
+    id: DBA36B5181D0C816F630E889D980A17457F6FB06
+    state: present
+
+- name: Add repository
+  apt_repository:
+    repo: "deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main"
+    state: present
+
+- name: Install
+  become: yes
+  apt:
+    name:
+      - signal-desktop
+    state: present
+    update_cache: true

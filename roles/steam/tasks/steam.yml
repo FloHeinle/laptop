@@ -1,0 +1,7 @@
+---
+
+- name: Install steam .dep
+  apt: 
+    deb: https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb
+    state: present
+    update_cache: true
